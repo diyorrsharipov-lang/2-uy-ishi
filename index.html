@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФД «КерамикЪ» — Ретро электрика, выключатели, розетки из фарфора</title>
+  
+  <!-- Fonts: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#F8A72E',
+              orangeHover: '#e59622',
+              orangeLight: '#F4AC40',
+              gold: '#DDAD67',
+              brown: '#6B422B',
+              brownDark: '#543321',
+              dark: '#171717',
+              darker: '#151515',
+              grayText: '#636363',
+              grayLight: '#F7F7F7',
+              grayBorder: '#E5E7EB',
+            }
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            'card-hover': '0 12px 28px -4px rgba(248, 167, 46, 0.15)',
+            'header': '0 2px 10px rgba(0, 0, 0, 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #171717;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #f8a72e;
+      border-radius: 4px;
+    }
+    .transition-smooth {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="bg-white text-brand-dark antialiased">
+
+  <!-- ==================== TOP BAR & HEADER ==================== -->
+  <header class="w-full bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+    <!-- Top Contact & User Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-brown to-brand-orange flex items-center justify-center text-white shadow-md transform group-hover:scale-105 transition-smooth">
+            <!-- Insulator/Switch Icon in Ceramic Style -->
+            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />
+              <circle cx="12" cy="12" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-baseline gap-1">
+              <span class="text-2xl font-black tracking-tight text-brand-dark uppercase">Керамикъ</span>
+              <span class="text-brand-orange text-lg font-bold">+</span>
+            </div>
+            <span class="text-[10px] tracking-widest uppercase font-medium text-gray-500">Фабрика Декора</span>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-md mx-8">
+          <div class="relative w-full">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Поиск по каталогу (розетки, провода, Salvador...)" 
+              class="w-full pl-10 pr-4 py-2.5 bg-gray-50 text-sm border border-gray-200 rounded-full focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 transition-smooth"
+            >
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone & Callback -->
+        <div class="hidden lg:flex flex-col items-end mr-6">
+          <a href="tel:+79267803663" class="text-base font-bold text-brand-dark hover:text-brand-orange transition-smooth flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+            </svg>
+            +7 926 780 3663
+          </a>
+          <button onclick="openCallbackModal()" class="text-xs text-brand-orange hover:text-brand-orangeHover font-medium underline underline-offset-2 transition-smooth">
+            Обратный звонок
+          </button>
+        </div>
+
+        <!-- User Actions (Favorites, Cart, Profile) -->
+        <div class="flex items-center gap-4">
+          <!-- Profile Button -->
+          <button onclick="showToast('Вход в личный кабинет')" class="p-2 text-gray-600 hover:text-brand-orange rounded-full hover:bg-orange-50 transition-smooth" title="Личный кабинет">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </button>
+
+          <!-- Bookmarks / Favorites -->
+          <button onclick="showToast('Открыто избранное (7 товаров)')" class="relative p-2 text-gray-600 hover:text-brand-orange rounded-full hover:bg-orange-50 transition-smooth" title="Избранное">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            <span class="absolute top-0.5 right-0.5 w-4 h-4 bg-brand-orange text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">7</span>
+          </button>
+
+          <!-- Cart -->
+          <div class="flex items-center bg-orange-50/80 hover:bg-orange-100/80 px-3.5 py-1.5 rounded-full border border-orange-200/60 cursor-pointer transition-smooth group" onclick="openCartModal()">
+            <div class="relative mr-2 text-brand-brown group-hover:text-brand-orange transition-smooth">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+              <span class="absolute -top-1 -right-1 w-2 h-2 bg-brand-orange rounded-full"></span>
+            </div>
+            <span class="text-xs font-bold text-brand-brown whitespace-nowrap">15 354 руб.</span>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gray-700 hover:text-brand-orange focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu Bar -->
+    <nav class="hidden lg:block bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-12">
+          
+          <div class="flex items-center space-x-8">
+            <!-- Catalog Dropdown Trigger -->
+            <div class="relative group" id="catalogDropdownContainer">
+              <button class="flex items-center gap-2 text-sm font-bold text-brand-orange hover:text-brand-orangeHover uppercase tracking-wider py-3 focus:outline-none">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <span>Каталог</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+              <!-- Catalog Mega Dropdown (Figma Hover Menu) -->
+              <div class="absolute left-0 top-full w-64 bg-white rounded-xl shadow-2xl border border-gray-100 py-3 hidden group-hover:block transition-all z-50">
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Розетки
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Выключатели
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Коробки распаечные
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Изоляторы кабельные
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Втулки керамические
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Рамки деревянные
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Провода витые
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Аксессуары
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Лампы Эдисона
+                </a>
+                <a href="#categories" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-smooth">
+                  <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  Светильники
+                </a>
+              </div>
+            </div>
+
+            <a href="#" class="text-sm font-bold text-brand-dark hover:text-brand-orange transition-smooth border-b-2 border-brand-orange py-3">Главная</a>
+            <a href="#about" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">О нас</a>
+            <a href="#advantages" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">Преимущества</a>
+            <a href="#process" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">Как купить</a>
+            <a href="#reviews" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">Отзывы</a>
+            <a href="#brands" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">Бренды</a>
+            <a href="#contacts" class="text-sm font-bold text-gray-600 hover:text-brand-orange transition-smooth py-3">Контакты</a>
+          </div>
+
+          <!-- Highlight Promo Tag -->
+          <div class="text-xs font-bold text-brand-orange bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+            Бесплатная доставка при заказе от 15 000 руб.
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <div class="relative w-full mb-3">
+        <input 
+          type="text" 
+          placeholder="Поиск..." 
+          class="w-full pl-9 pr-3 py-2 bg-gray-50 text-sm border border-gray-200 rounded-lg focus:outline-none focus:border-brand-orange"
+        >
+        <svg class="w-4 h-4 absolute left-3 top-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      <a href="#" class="block text-base font-bold text-brand-orange py-1">Главная</a>
+      <a href="#categories" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">Каталог товаров</a>
+      <a href="#about" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">О нас</a>
+      <a href="#advantages" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">Преимущества</a>
+      <a href="#process" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">Процесс покупки</a>
+      <a href="#reviews" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">Отзывы</a>
+      <a href="#brands" class="block text-base font-medium text-gray-700 hover:text-brand-orange py-1">Производители</a>
+      <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+        <a href="tel:+79267803663" class="text-base font-bold text-brand-dark">+7 926 780 3663</a>
+        <button onclick="openCallbackModal()" class="text-left text-sm text-brand-orange font-bold">Заказать обратный звонок</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO BANNER SLIDER ==================== -->
+  <section class="relative overflow-hidden bg-[#241c18] text-white">
+    <!-- Texture Overlay Background -->
+    <div class="absolute inset-0 opacity-25 mix-blend-overlay bg-cover bg-center" style="background-image: url('images/banner_bg_texture.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-xs font-bold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+            Специальная акция Salvador
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white tracking-tight">
+            Ищете где купить <br class="hidden sm:inline">
+            <span class="text-brand-orange">механизмы Salvador?</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-gray-300 max-w-xl font-light leading-relaxed">
+            Осуществляя ее заказ на общую сумму от 100 000 рублей, под все заказанные выключатели и розетки для открытой проводки в подарок вы получаете рамки из натурального бука нашего собственного производства.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <button onclick="scrollToSection('categories')" class="px-8 py-3.5 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold rounded-lg shadow-lg shadow-brand-orange/30 transform hover:-translate-y-0.5 transition-smooth flex items-center gap-2">
+              <span>Подробнее</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+            <button onclick="openCallbackModal()" class="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 backdrop-blur-sm transition-smooth">
+              Получить консультацию
+            </button>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="flex items-center gap-2.5 pt-6">
+            <span class="w-8 h-2.5 bg-brand-orange rounded-full cursor-pointer"></span>
+            <span class="w-2.5 h-2.5 bg-white/40 hover:bg-white/80 rounded-full cursor-pointer transition-smooth"></span>
+            <span class="w-2.5 h-2.5 bg-white/40 hover:bg-white/80 rounded-full cursor-pointer transition-smooth"></span>
+            <span class="w-2.5 h-2.5 bg-white/40 hover:bg-white/80 rounded-full cursor-pointer transition-smooth"></span>
+          </div>
+        </div>
+
+        <!-- Right Product Showcase -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Glow background circle -->
+            <div class="absolute -inset-4 bg-brand-orange/20 rounded-full filter blur-2xl"></div>
+            
+            <!-- Hero Product Image from Figma -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 backdrop-blur-xs p-4 flex items-center justify-center">
+              <img 
+                src="images/banner_hero.png" 
+                alt="Ретро выключатели Salvador" 
+                class="w-full h-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-smooth duration-500"
+              >
+            </div>
+
+            <!-- Floating Badge Card -->
+            <div class="absolute -bottom-6 -left-6 bg-white text-brand-dark p-3.5 rounded-xl shadow-2xl border border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-brand-orange font-black text-lg">
+                🎁
+              </div>
+              <div>
+                <p class="text-xs font-bold leading-tight">Буковые рамки</p>
+                <p class="text-[11px] text-gray-500">В подарок к заказу</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CATEGORIES SECTION ==================== -->
+  <section id="categories" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">
+          Каталог продукции
+        </h2>
+        <div class="w-16 h-1 bg-brand-orange mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-gray-600 font-light">
+          Полный ассортимент дизайнерской керамической электрики, винтажных проводов и фурнитуры для открытого монтажа
+        </p>
+      </div>
+
+      <!-- Categories Grid (10 items from Figma) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        
+        <!-- 1. Розетки -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_sockets.png" alt="Розетки керамические" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Розетки
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 850 ₽</span>
+        </a>
+
+        <!-- 2. Выключатели -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_switches.png" alt="Выключатели поворотные" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Выключатели
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 920 ₽</span>
+        </a>
+
+        <!-- 3. Коробки распаечные -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_boxes.png" alt="Коробки распаечные" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Коробки <br class="hidden sm:inline">распаечные
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 640 ₽</span>
+        </a>
+
+        <!-- 4. Изоляторы кабельные -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_insulators.png" alt="Изоляторы кабельные" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Изоляторы <br class="hidden sm:inline">кабельные
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 35 ₽</span>
+        </a>
+
+        <!-- 5. Втулки -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_bushings.png" alt="Втулки керамические" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Втулки
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 90 ₽</span>
+        </a>
+
+        <!-- 6. Рамки -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_frames.png" alt="Рамки деревянные и фарфоровые" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Рамки
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 420 ₽</span>
+        </a>
+
+        <!-- 7. Провода -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_wires.png" alt="Провода витые ретро" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Провода
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 120 ₽/м</span>
+        </a>
+
+        <!-- 8. Аксессуары -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_accessories.png" alt="Аксессуары для монтажа" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Аксессуары
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 150 ₽</span>
+        </a>
+
+        <!-- 9. Лампы -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_lamps.png" alt="Лампы Эдисона и филаментные" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Лампы
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 310 ₽</span>
+        </a>
+
+        <!-- 10. Светильники -->
+        <a href="#catalog" class="group bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-card-hover hover:border-brand-orange/40 transition-smooth flex flex-col items-center text-center">
+          <div class="w-36 h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-gray-50/60 p-2">
+            <img src="images/cat_luminaires.png" alt="Винтажные светильники" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-smooth">
+          </div>
+          <span class="text-base font-black text-brand-dark group-hover:text-brand-orange uppercase tracking-wide transition-smooth">
+            Светильники
+          </span>
+          <span class="text-xs text-gray-400 mt-1 font-medium">от 1 450 ₽</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== ADVANTAGES SECTION ==================== -->
+  <section id="advantages" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">
+          Наши преимущества
+        </h2>
+        <div class="w-16 h-1 bg-brand-orange mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-gray-600 font-light">
+          Почему тысячи архитекторов, дизайнеров и владельцев домов выбирают «КерамикЪ»
+        </p>
+      </div>
+
+      <!-- Advantages 10 Cards Grid (from Figma node 8:82) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <!-- 1. Официальный товар -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Официальный товар</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Весь ассортимент сертифицированный</p>
+          </div>
+        </div>
+
+        <!-- 2. Собственное производство -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Собственное производство</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Гарантия и качество от производителя</p>
+          </div>
+        </div>
+
+        <!-- 3. Собственный склад -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Собственный склад</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Поэтому доставляем товар очень быстро</p>
+          </div>
+        </div>
+
+        <!-- 4. Весь товар вместе -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Весь товар вместе</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Все бренды в одном месте</p>
+          </div>
+        </div>
+
+        <!-- 5. Наша специализация -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Наша специализация</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Специализируемся на ретро электрике</p>
+          </div>
+        </div>
+
+        <!-- 6. Эксклюзивный товар -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Эксклюзивный товар</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Эксклюзивные цветовые решения</p>
+          </div>
+        </div>
+
+        <!-- 7. Актуальные акции -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Актуальные акции</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Только новые и честные акции</p>
+          </div>
+        </div>
+
+        <!-- 8. Гибкий подход -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Гибкий подход</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Индивидуальный подход в подборе</p>
+          </div>
+        </div>
+
+        <!-- 9. Бесплатная доставка -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">Бесплатная доставка</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">В зависимости от размера покупки</p>
+          </div>
+        </div>
+
+        <!-- 10. На рынке более 10 лет -->
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50/60 border border-gray-100 hover:border-brand-orange/30 transition-smooth group flex flex-col justify-between">
+          <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-smooth">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-brand-dark mb-1">На рынке более 10 лет</h3>
+            <p class="text-xs text-gray-500 font-normal leading-relaxed">Поделимся знанием и опытом</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== ABOUT US SECTION ==================== -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-gray-100 shadow-xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Image Column -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="images/about_us.jpg" 
+                alt="Фабрика Декора Керамикъ" 
+                class="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 transition-smooth duration-700"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="inline-block px-3 py-1 bg-brand-orange text-white text-xs font-bold rounded-md uppercase mb-2">
+                  Производство & Традиции
+                </span>
+                <p class="text-sm font-medium text-gray-200">
+                  Собственные мастерские по обжигу фарфора и обработке дерева
+                </p>
+              </div>
+            </div>
+            
+            <!-- Experience Badge -->
+            <div class="absolute -top-4 -right-4 bg-brand-dark text-white p-4 rounded-2xl shadow-xl border-2 border-brand-orange hidden sm:block">
+              <p class="text-2xl font-black text-brand-orange">10+</p>
+              <p class="text-xs text-gray-300 font-medium">Лет на рынке</p>
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-block text-xs font-bold uppercase tracking-widest text-brand-orange bg-orange-50 px-3 py-1 rounded-full">
+              О компании
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-black text-brand-dark tracking-tight">
+              Коротко о нас
+            </h2>
+
+            <div class="space-y-4 text-brand-grayText text-base font-light leading-relaxed">
+              <p>
+                Мы, <strong class="font-bold text-brand-dark">Фабрика Декора "КерамикЪ"</strong>, уже много лет специализируемся на ретро электрике.
+              </p>
+              <p>
+                За годы существования из увлекшихся любителей с горящими глазами наша команда превратилась в настоящих с большой буквы Профессионалов своего дела. Но искра в наших глазах совершенно не затухла!
+              </p>
+              <p>
+                Сегодня, мы планомерно работаем над тем, чтоб вырастить в таких же Профессионалов новых членов нашей команды, сохраняя непревзойдённое качество каждого изделия.
+              </p>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openAboutModal()" class="px-8 py-3.5 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold rounded-lg shadow-lg shadow-brand-orange/20 transition-smooth">
+                Подробнее
+              </button>
+              <button onclick="openCallbackModal()" class="px-6 py-3.5 border border-gray-200 hover:border-brand-orange text-brand-dark hover:text-brand-orange text-sm font-bold rounded-lg transition-smooth">
+                Связаться с нами
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== PURCHASE PROCESS SECTION ==================== -->
+  <section id="process" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">
+          Процесс покупки товара
+        </h2>
+        <div class="w-16 h-1 bg-brand-orange mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-gray-600 font-light">
+          Два удобных и быстрых способа оформления заказа на ваш выбор
+        </p>
+      </div>
+
+      <!-- Option 1: Online Ordering -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 bg-brand-orange text-white text-xs font-bold rounded-md">Вариант 1</span>
+          <h3 class="text-lg font-bold text-brand-dark">Оформление через сайт онлайн</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 relative">
+          
+          <!-- Step 1 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-orange flex items-center justify-center font-black text-lg mb-4">
+              1
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Выберете товар</h4>
+            <p class="text-xs text-gray-500">в каталоге сайта</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-orange flex items-center justify-center font-black text-lg mb-4">
+              2
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Оформите заказ</h4>
+            <p class="text-xs text-gray-500">через корзину</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-orange flex items-center justify-center font-black text-lg mb-4">
+              3
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Наш менеджер</h4>
+            <p class="text-xs text-gray-500">свяжется с вами</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-orange flex items-center justify-center font-black text-lg mb-4">
+              4
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Мы отправим</h4>
+            <p class="text-xs text-gray-500">вам товар</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bg-orange-50/80 rounded-2xl p-6 border border-orange-200 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center font-black text-lg mb-4 shadow-md">
+              ✓
+            </div>
+            <h4 class="font-bold text-base text-brand-orange mb-1">Вы счастливый клиент</h4>
+            <p class="text-xs text-brand-brown">с отличным ремонтом</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Divider: ИЛИ -->
+      <div class="relative my-10 flex items-center justify-center">
+        <div class="border-t border-gray-200 w-full"></div>
+        <span class="bg-white px-6 text-sm font-bold text-gray-400 uppercase tracking-widest absolute">
+          или
+        </span>
+      </div>
+
+      <!-- Option 2: Phone Ordering -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 bg-brand-brown text-white text-xs font-bold rounded-md">Вариант 2</span>
+          <h3 class="text-lg font-bold text-brand-dark">Заказ по телефону за 2 минуты</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          
+          <!-- Step 1 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-brown flex items-center justify-center font-black text-lg mb-4">
+              1
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Вы звоните нам</h4>
+            <p class="text-xs text-gray-500">или заказываете звонок</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-brown flex items-center justify-center font-black text-lg mb-4">
+              2
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Оформляем заказ</h4>
+            <p class="text-xs text-gray-500">вместе с экспертом</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-white shadow-sm text-brand-brown flex items-center justify-center font-black text-lg mb-4">
+              3
+            </div>
+            <h4 class="font-bold text-base text-brand-dark mb-1">Мы отправим</h4>
+            <p class="text-xs text-gray-500">вам товар</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-orange-50/80 rounded-2xl p-6 border border-orange-200 flex flex-col items-center text-center relative group hover:border-brand-orange transition-smooth">
+            <div class="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center font-black text-lg mb-4 shadow-md">
+              ✓
+            </div>
+            <h4 class="font-bold text-base text-brand-orange mb-1">Вы счастливый клиент</h4>
+            <p class="text-xs text-brand-brown">с надёжной гарантией</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== REVIEWS / TESTIMONIALS SECTION ==================== -->
+  <section id="reviews" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">
+          Отзывы наших клиентов
+        </h2>
+        <div class="w-16 h-1 bg-brand-orange mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-gray-600 font-light">
+          Реальные отзывы от клиентов и партнёров, использующих нашу ретро электрику
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-card-hover transition-smooth flex flex-col justify-between">
+          <div>
+            <!-- Stars -->
+            <div class="flex items-center gap-1 text-brand-orange mb-6">
+              ★★★★★
+            </div>
+            <p class="text-sm text-gray-600 font-light leading-relaxed mb-6 italic">
+              «Мы, Фабрика Декора "КерамикЪ", уже много лет специализируемся на ретро электрике. За годы существования из увлекшихся любителей с горящими глазами наша команда превратилась в настоящих с большой буквы Профессионалов своего дела.»
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+            <img src="images/avatar_1.jpg" alt="Андрей Иванов" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange">
+            <div>
+              <h4 class="text-sm font-bold text-brand-orange">Андрей Иванов</h4>
+              <p class="text-xs text-gray-400">10.07.19</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-card-hover transition-smooth flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-brand-orange mb-6">
+              ★★★★★
+            </div>
+            <p class="text-sm text-gray-600 font-light leading-relaxed mb-6 italic">
+              «Заказывали крупную партию керамических выключателей и буковых рамок для ресторанного комплекса. Качество фарфора на высочайшем уровне, чёткий щелчок тумблеров и идеальная геометрия.»
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+            <img src="images/avatar_2.jpg" alt="Samsung inc." class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange">
+            <div>
+              <h4 class="text-sm font-bold text-brand-orange">Samsung inc.</h4>
+              <p class="text-xs text-gray-400">10.07.19</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-card-hover transition-smooth flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-brand-orange mb-6">
+              ★★★★★
+            </div>
+            <p class="text-sm text-gray-600 font-light leading-relaxed mb-6 italic">
+              «Отличная консультация при расчёте количества изоляторов и длины витого провода. Доставили в деревянный дом на следующий день. Всем рекомендую команду Фабрики КерамикЪ!»
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+            <img src="images/avatar_3.jpg" alt="Александр Сергеев" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange">
+            <div>
+              <h4 class="text-sm font-bold text-brand-orange">Александр Сергеев</h4>
+              <p class="text-xs text-gray-400">10.07.19</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider indicator dots -->
+      <div class="flex items-center justify-center gap-2 pt-10">
+        <span class="w-3 h-3 rounded-full bg-brand-orange cursor-pointer"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 cursor-pointer transition-smooth"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 cursor-pointer transition-smooth"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== BRANDS / MANUFACTURERS SECTION ==================== -->
+  <section id="brands" class="py-16 bg-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-orange mb-1">Официальные партнёры</p>
+        <h2 class="text-2xl font-black text-brand-dark uppercase tracking-tight">
+          Популярные производители
+        </h2>
+      </div>
+
+      <!-- Brands Row (from Figma node 6:19) -->
+      <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-6 items-center">
+        
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_salvador.png" alt="Salvador" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_bironi.png" alt="Bironi" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_fdkeramik.png" alt="ФД Керамикъ" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_greenel.png" alt="GreenEL" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_lindas.png" alt="Lindas" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_nabrevno.png" alt="naBrevno" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_retrika.png" alt="Retrika" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_sunlumen.png" alt="Sun Lumen" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+        <div class="flex items-center justify-center p-3 bg-gray-50 hover:bg-white rounded-xl border border-transparent hover:border-gray-200 transition-smooth group h-20">
+          <img src="images/brand_werkel.png" alt="Werkel" class="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-smooth">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SEO TEXT SECTION ==================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gray-50 rounded-3xl p-8 sm:p-12 border border-gray-100">
+        
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl sm:text-3xl font-black text-brand-dark tracking-tight">
+            Ретро электрика в современном интерьере
+          </h2>
+          <button id="toggleSeoBtn" onclick="toggleSeoText()" class="text-sm font-bold text-brand-orange hover:text-brand-orangeHover flex items-center gap-1.5 transition-smooth">
+            <span id="toggleSeoLabel">Больше</span>
+            <svg id="toggleSeoIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="prose max-w-none text-gray-600 font-light text-sm sm:text-base leading-relaxed space-y-4">
+          <p>
+            Фабрика Декора «КерамикЪ» предлагает эксклюзивные серии открытой электропроводки из настоящего электротехнического фарфора и благородных пород дерева. Открытая проводка в стиле ретро, винтаж и лофт — это не просто дань исторической эстетике, но и идеальное инженерное решение для деревянных домов, бревенчатых срубов, бань и открытых кирпичных стен.
+          </p>
+          
+          <div id="seoExpandedContent" class="hidden space-y-4 pt-2">
+            <p>
+              Вся наша продукция соответствует строжайшим стандартам пожарной и электрической безопасности ГОСТ. Керамический корпус не нагревается, не поддерживает горение, обладает абсолютными диэлектрическими свойствами и сохраняет первозданный глянец на протяжении десятилетий.
+            </p>
+            <p>
+              Мы сотрудничаем с ведущими производителями: Salvador, Bironi, GreenEL, Lindas, naBrevno, Retrika, Sun Lumen, Werkel, а также выпускаем собственные уникальные коллекции рамок из кавказского бука и дуба.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contacts" class="bg-[#191919] text-gray-400 pt-16 pb-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Footer Columns (from Figma node 14:10) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
+        
+        <!-- Col 1: КАК ПРИОБРЕСТИ -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Как приобрести</h3>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Доставка по России и СНГ</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Способы оплаты</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Публичная оферта</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Политика конфиденциальности</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Возврат и обмен товара</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: ЛИЧНОЕ ПРОСТРАНСТВО -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Личное пространство</h3>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li><a href="#" onclick="showToast('Вход в кабинет'); return false;" class="hover:text-brand-orange transition-smooth">Войти в кабинет</a></li>
+            <li><a href="#" onclick="showToast('История заказов пуста'); return false;" class="hover:text-brand-orange transition-smooth">История заказов</a></li>
+            <li><a href="#" onclick="showToast('В избранном 7 товаров'); return false;" class="hover:text-brand-orange transition-smooth">Избранные товары (7)</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Подписка на скидки</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: ПОЛЕЗНАЯ ИНФОРМАЦИЯ -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Полезная информация</h3>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li><a href="tel:+79267803663" class="hover:text-brand-orange transition-smooth font-bold text-white">+7 926 780 3663</a></li>
+            <li><a href="mailto:info@keramik.ru" class="hover:text-brand-orange transition-smooth">info@keramik.ru</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Сотрудничество с дизайнерами</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Монтаж и инструкции</a></li>
+            <li><a href="#" class="hover:text-brand-orange transition-smooth">Карта сайта</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: ПОДПИСАТЬСЯ -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Подписаться</h3>
+          <p class="text-xs text-gray-400 font-light leading-relaxed">
+            Подпишитесь на наши новости и узнавайте первыми о самом интересном, что происходит в увлекательном мире ретро электрики.
+          </p>
+
+          <form onsubmit="handleSubscribe(event)" class="space-y-2">
+            <div class="relative">
+              <input 
+                type="email" 
+                id="subscribeEmail" 
+                required 
+                placeholder="Ваш E-mail адрес" 
+                class="w-full px-4 py-2.5 bg-gray-800 text-xs text-white placeholder-gray-500 rounded-lg border border-gray-700 focus:outline-none focus:border-brand-orange"
+              >
+            </div>
+            <button type="submit" class="w-full py-2.5 bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold rounded-lg transition-smooth uppercase tracking-wider shadow-md">
+              Подписаться
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <div>
+          Copyright © 2019–2026 | ФД "КерамикЪ". Все права защищены.
+        </div>
+
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-brand-orange transition-smooth">Instagram</a>
+          <a href="#" class="hover:text-brand-orange transition-smooth">Telegram</a>
+          <a href="#" class="hover:text-brand-orange transition-smooth">VKontakte</a>
+          <a href="#" class="hover:text-brand-orange transition-smooth">YouTube</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==================== MODALS & TOASTS ==================== -->
+
+  <!-- Callback Modal -->
+  <div id="callbackModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative">
+      <button onclick="closeCallbackModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-orange-100 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-brand-dark">Заказ обратного звонка</h3>
+        <p class="text-xs text-gray-500 mt-1">Оставьте контактные данные, и специалист свяжется с вами в течение 10 минут</p>
+      </div>
+
+      <form onsubmit="handleCallbackSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Иван Иванов" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (___) ___-__-__" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Комментарий к заказу</label>
+          <textarea rows="2" placeholder="Хочу заказать механизмы Salvador..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold rounded-xl shadow-lg shadow-brand-orange/20 transition-smooth">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative">
+      <button onclick="closeCartModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+        <div class="w-10 h-10 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-brand-dark">Корзина заказов</h3>
+          <p class="text-xs text-gray-500">В корзине 3 товара</p>
+        </div>
+      </div>
+
+      <!-- Cart Items -->
+      <div class="space-y-3 mb-6 max-h-60 overflow-y-auto pr-1">
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <img src="images/cat_switches.png" class="w-12 h-12 object-contain bg-white rounded-lg p-1 border border-gray-200">
+            <div>
+              <h4 class="text-xs font-bold text-brand-dark">Выключатель поворотный Salvador</h4>
+              <p class="text-[11px] text-gray-500">Белый фарфор / 10 шт.</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-brand-brown">9 200 ₽</span>
+        </div>
+
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <img src="images/cat_sockets.png" class="w-12 h-12 object-contain bg-white rounded-lg p-1 border border-gray-200">
+            <div>
+              <h4 class="text-xs font-bold text-brand-dark">Розетка с заземлением фарфоровая</h4>
+              <p class="text-[11px] text-gray-500">Белый фарфор / 5 шт.</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-brand-brown">4 250 ₽</span>
+        </div>
+
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <img src="images/cat_wires.png" class="w-12 h-12 object-contain bg-white rounded-lg p-1 border border-gray-200">
+            <div>
+              <h4 class="text-xs font-bold text-brand-dark">Провод витой 3x1.5 слоновая кость</h4>
+              <p class="text-[11px] text-gray-500">Бухта 15 метров</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-brand-brown">1 904 ₽</span>
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="pt-4 border-t border-gray-100 flex items-center justify-between mb-6">
+        <span class="text-sm font-bold text-gray-700">Итого к оплате:</span>
+        <span class="text-xl font-black text-brand-orange">15 354 руб.</span>
+      </div>
+
+      <button onclick="showToast('Заказ оформлен! Менеджер свяжется с вами.'); closeCartModal();" class="w-full py-3.5 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold rounded-xl shadow-lg shadow-brand-orange/20 transition-smooth">
+        Перейти к оформлению
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 bg-brand-dark text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 z-50 transform translate-y-24 opacity-0 transition-all duration-300">
+    <div class="w-2 h-2 rounded-full bg-brand-orange"></div>
+    <span id="toastMessage" class="text-xs font-medium"></span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function openCallbackModal() {
+      document.getElementById('callbackModal').classList.remove('hidden');
+    }
+
+    function closeCallbackModal() {
+      document.getElementById('callbackModal').classList.add('hidden');
+    }
+
+    function openCartModal() {
+      document.getElementById('cartModal').classList.remove('hidden');
+    }
+
+    function closeCartModal() {
+      document.getElementById('cartModal').classList.add('hidden');
+    }
+
+    function toggleSeoText() {
+      const content = document.getElementById('seoExpandedContent');
+      const label = document.getElementById('toggleSeoLabel');
+      const icon = document.getElementById('toggleSeoIcon');
+      
+      content.classList.toggle('hidden');
+      if (content.classList.contains('hidden')) {
+        label.innerText = 'Больше';
+        icon.classList.remove('rotate-180');
+      } else {
+        label.innerText = 'Скрыть';
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const message = document.getElementById('toastMessage');
+      message.innerText = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const email = document.getElementById('subscribeEmail').value;
+      showToast(`Спасибо за подписку! На адрес ${email} отправлен промокод на скидку.`);
+      e.target.reset();
+    }
+
+    function handleCallbackSubmit(e) {
+      e.preventDefault();
+      closeCallbackModal();
+      showToast('Спасибо за заявку! Менеджер свяжется с вами в течение 10 минут.');
+      e.target.reset();
+    }
+
+    function openAboutModal() {
+      showToast('Фабрика Декора Керамикъ — ведущий производитель дизайнерской ретро электрики.');
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Close modals on clicking backdrop
+    window.onclick = function(event) {
+      const callback = document.getElementById('callbackModal');
+      const cart = document.getElementById('cartModal');
+      if (event.target === callback) closeCallbackModal();
+      if (event.target === cart) closeCartModal();
+    }
+  </script>
+</body>
+</html>
